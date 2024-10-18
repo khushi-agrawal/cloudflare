@@ -83,4 +83,52 @@ export class YourComponent implements OnInit {
 }
 
 >>>>
+     <div class="data-table">
+            <table mat-table #table [dataSource]="dataSource" summary="Uploaded Records" width="100%" matSort>
+
+              <!-- Edit Column -->
+              <ng-container matColumnDef="Edit Details" sticky>
+                <th mat-header-cell *matHeaderCellDef>Edit Details</th>
+                <td mat-cell *matCellDef="let element; let i = index">
+                  <button mat-icon-button (click)="toggleEdit(element, i)">
+                    <img [src]="currentEditingRowIndex === i ? 'assets/images/save_1.png' : 'assets/images/edit.png'" />
+                  </button>
+                </td>
+              </ng-container>
+
+              <!-- Filter Row (Dynamic Columns) -->
+              <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+                <th mat-header-cell *matHeaderCellDef [ngClass]="{'prj-header': column === 'Project Id'}">
+                  {{column}}
+
+                  <!-- Filter Input and Dropdown -->
+                  <div class="filter-row">
+                    <select [(ngModel)]="filterCriteria[column]" (change)="applyFilter()">
+                      <option value="none">No Filter</option>
+                      <option value="startsWith">Starts With</option>
+                      <option value="contains">Contains</option>
+                    </select>
+                    <input type="text" [(ngModel)]="filterValues[column]" (input)="applyFilter()" placeholder="Filter {{column}}" />
+                  </div>
+                </th>
+
+                <!-- Cell Data -->
+                <td mat-cell *matCellDef="let element">
+                  {{element[column]}}
+                </td>
+              </ng-container>
+
+              <!-- Header and Row Definitions -->
+              <tr mat-header-row *matHeaderRowDef="['Edit Details'].concat(displayedColumns); sticky: true" class="table-head-row"></tr>
+              <tr mat-row *matRowDef="let row; columns: ['Edit Details'].concat(displayedColumns);" class="table-row"></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+>>>
+
 
