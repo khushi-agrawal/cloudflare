@@ -1,0 +1,86 @@
+<table mat-table [dataSource]="dataSource" matSort>
+
+  <!-- Dynamically generated columns -->
+  <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+    <th mat-header-cell *matHeaderCellDef> {{ column }} </th>
+    <td mat-cell *matCellDef="let element"> {{ element[column] }} </td>
+
+    <!-- Filter row below header -->
+    <th mat-header-cell *matHeaderCellDef>
+      <mat-form-field>
+        <mat-select [(value)]="filterOptions[column]">
+          <mat-option value="startsWith">Starts With</mat-option>
+          <mat-option value="contains">Contains</mat-option>
+          <mat-option value="noFilter">No Filter</mat-option>
+        </mat-select>
+        <input matInput (input)="applyFilter($event.target.value, column)" placeholder="Filter {{ column }}">
+      </mat-form-field>
+    </th>
+  </ng-container>
+
+  <!-- Header and Data Rows -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+export class YourComponent implements OnInit {
+  displayedColumns: string[] = []; // Store column headers dynamically
+  dataSource = new MatTableDataSource<any>();
+  filterOptions: { [key: string]: string } = {}; // Store filter type for each column
+
+  ngOnInit() {
+    // Initialize headers and data dynamically (assuming you're fetching them)
+    this.fetchTableData();
+  }
+
+  fetchTableData() {
+    // Example: Fetch data dynamically and set headers accordingly
+    const data = [
+      { name: 'John', age: 25, country: 'USA' },
+      { name: 'Jane', age: 30, country: 'Canada' },
+      { name: 'Max', age: 35, country: 'Germany' }
+    ];
+
+    // Extract column headers dynamically based on keys of the first data object
+    this.displayedColumns = Object.keys(data[0]);
+
+    // Initialize the data source with the dynamic data
+    this.dataSource = new MatTableDataSource(data);
+
+    // Initialize filterOptions for each column
+    this.displayedColumns.forEach(column => {
+      this.filterOptions[column] = 'noFilter'; // Default to 'noFilter'
+    });
+
+    // Set up the default filter predicate
+    this.dataSource.filterPredicate = this.createFilterPredicate();
+  }
+
+  applyFilter(filterValue: string, column: string) {
+    // Trigger filtering logic dynamically
+    this.dataSource.filter = JSON.stringify({ column, value: filterValue.trim().toLowerCase() });
+  }
+
+  createFilterPredicate(): (data: any, filter: string) => boolean {
+    return (data: any, filter: string) => {
+      const parsedFilter = JSON.parse(filter);
+      const column = parsedFilter.column;
+      const filterValue = parsedFilter.value;
+      const cellValue = data[column]?.toString().toLowerCase() || '';
+
+      const filterCriteria = this.filterOptions[column];
+
+      if (filterCriteria === 'startsWith') {
+        return cellValue.startsWith(filterValue);
+      } else if (filterCriteria === 'contains') {
+        return cellValue.includes(filterValue);
+      } else {
+        return true; // No filter applied
+      }
+    };
+  }
+}
+
+>>>>
+
