@@ -1,56 +1,57 @@
 
+{{ column }}
+          <button mat-icon-button [matMenuTriggerFor]="filterMenu" (click)="currentFilterColumn = column">
+            <mat-icon>filter_alt</mat-icon>
+          </button>
+          <!-- Filter Menu -->
+          <mat-menu #filterMenu="matMenu">
+            <div class="filter-menu">
+              <mat-form-field>
+                <mat-select [(value)]="filterCondition" placeholder="Condition">
+                  <mat-option value="contains">Contains</mat-option>
+                  <mat-option value="equals">Equals</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput [(ngModel)]="filterValue" placeholder="Filter {{ column }}" />
+              </mat-form-field>
+              <button mat-button (click)="applyFilter(column)">Apply</button>
+            </div>
+          </mat-menu>
+        </th>
+
+.filter-menu {
+  padding: 10px;
+  width: 200px;
+}
+
+mat-form-field {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+
+applyFilter(column: string): void {
+    this.dataSource.filterPredicate = (data, filter) => {
+      const value = data[column]?.toString().toLowerCase() || '';
+      const searchText = filter.toLowerCase();
+
+      if (this.filterCondition === 'contains') {
+        return value.includes(searchText);
+      } else if (this.filterCondition === 'equals') {
+        return value === searchText;
+      }
+      return false;
+    };
+
+    this.dataSource.filter = this.filterValue;
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
+}
 
  
 
-Year in Review: 2024
-
-This year has been transformative, marked by significant achievements, leadership roles, and recognition across various domains. Here’s an overview of my journey:
-
-1. Project Ownership and Delivery
-
-I successfully led the Plot module of a key project, taking full ownership of its delivery.
-	•	Acted as the primary point of contact with the line of business, handling requirements, collaborating with the L2 and L3 teams, and driving seamless communication between stakeholders and the team.
-	•	Focused on defect resolution, production support, and ensuring timely delivery, while balancing team collaboration and individual responsibility.
-
-2. Recognition and Achievements
-
-My contributions this year were widely recognized across various platforms:
-	•	Bronze Award for excelling in BAU deliverables.
-	•	Silver Award from the CWT Core Innovation Team for my significant contributions.
-	•	Global Recognition from Aditya Bin for being a first-time patent filer.
-	•	Featured in multiple newsletters: Ignite Newsletter, MFC Innovation Newsletter, MFC Success Story, and ATM Newsletter for my contributions to innovation and project successes.
-
-3. Innovation and Patents
-
-Innovation has been a core focus this year, with notable contributions and ongoing efforts:
-	•	Filed three patents, addressing real-life challenges and enhancing customer experience.
-	•	Currently working on several new patents that are in progress, further contributing to the innovation culture.
-	•	Presented at the client-site Innovation Challenge, showcasing impactful ideas.
-	•	Led and contributed to the Innovation Patent Cluster, grooming think-tank ideas into actionable concepts.
-	•	Participated in the GPS Campus Guards Innovation Hackathon, contributing to creative solutions.
-	•	Participated as a panelist in Geek Talk, sharing my patent journey and insights on innovation.
-
-4. Leadership and Public Speaking
-
-Public speaking and hosting have been key highlights of my year:
-	•	Delivered multiple presentations at forums such as Eye Session, SLT Connect, and more.
-	•	Hosted prominent events, including the Market Leader Connect, fostering dialogue and collaboration.
-	•	Acted as a panelist in various discussions, sharing my experiences and expertise.
-
-5. Continuous Learning and Upskilling
-
-To prepare for upcoming challenges and opportunities, I focused on learning and skill development:
-	•	Completed certifications in Java and HTML through IBM courses.
-	•	Took external training in React, enhancing my front-end development expertise.
-	•	Currently upskilling in cloud technologies to prepare for an upcoming inter-client initiative.
-
-6. Bank Initiatives and Engagement
-
-I actively participated in initiatives that foster innovation, collaboration, and community building:
-	•	Contributed to the Open TAP initiative, specifically the ATM Dashboard Project, with valuable insights and deliverables.
-	•	Volunteered in ESG events and other employee engagement activities.
-	•	Actively participated in hackathons, including the Innovation Hackathon, CG Hackathon, and GPS Campus Guards Hackathon.
-
-Reflections and Looking Ahead
-
-2024 has been a year of growth, leadership, and impact. Whether driving innovation, mentoring others, or excelling in deliverables, I’ve embraced opportunities to make a difference. Moving into 2025, I’m eager to further enhance my contributions, explore cloud technologies, and take on greater challenges while continuing to inspire and innovate.
