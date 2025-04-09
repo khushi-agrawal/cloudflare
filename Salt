@@ -65,3 +65,149 @@ Incorporating salting enhances the existing security mechanisms by ensuring that
 Even with access controls around the ARP table, incorporating a salting mechanism adds a vital layer of security that helps protect against advanced network-level threats. Salting prevents replay attacks by ensuring that even if an attacker captures ARP requests or responses, they cannot be reused, as each exchange is uniquely tied to the salt. This mechanism also enhances the integrity of the ARP entries, making it harder for attackers to introduce false entries or manipulate data, even if they manage to gain privileged access.
 
 Furthermore, salting is essential to combat ARP cache poisoning, where malicious entries can be injected at the network level despite outer security measures. The added randomness of the salt ensures that each ARP exchange is unique, providing an additional internal defense. In the context of a layered security approach, salting future-proofs the system against evolving attack methods, offering a robust defense even if other controls are bypassed. This makes it a crucial component of any secure ARP table implementation.
+
+
+----------->
+
+1. Problem Statement
+
+Offline payment systems using Bluetooth Low Energy (BLE) suffer from critical vulnerabilities due to lack of real-time verification or logging:
+	•	One-sided logs can be modified before syncing.
+	•	There’s no reliable cryptographic way to prove the transaction actually occurred when both parties were offline.
+	•	This leads to disputes, double spending, or fraud, especially in remote areas or BLE mesh payment scenarios.
+
+Currently, no solution ensures mutual logging, verification, and resolution of such offline BLE transactions.
+
+⸻
+
+2. Technical Solution
+
+Introduce a Dual Merkle Tree Logging System, in which:
+	•	Both parties (Wallet & BLE Terminal) maintain local Merkle Trees that log each transaction hash.
+	•	Each transaction is digitally signed by both participants using their private keys.
+	•	Upon reconnection to a backend system:
+	•	Both submit logs + Merkle root hash.
+	•	Backend compares Merkle trees, verifies signatures, and resolves discrepancies.
+	•	Optionally, the system can detect and flag fraud (like dropped or tampered entries).
+
+This ensures tamper-evident, mutually verifiable, and space-efficient offline payments.
+
+⸻
+
+3. Key Innovation Points
+Feature
+What Makes It Patentable?
+Dual-device Merkle logging
+Novelty lies in both ends maintaining cryptographically hashed logs, compared post-facto.
+Digital signatures at each node
+Every txn is signed and hashed before being added to Merkle trees.
+Dispute resolution algorithm
+Backend compares both Merkle trees, detects conflicts, and applies resolution logic.
+Memory-efficient design
+Only Merkle root + transaction IDs need sync in normal flow. Full logs are used for audits or disputes.
+
+
+Existing Solutions
+Our Solution
+Single-side logging, or post-facto syncing with server
+Dual-side logging with proof-of-honesty
+No Merkle-based verification
+Verifiable Merkle hash logs on both sides
+No fraud detection on sync
+Conflicting Merkle roots → fraud detection
+
+
+Component
+Role
+BLE Payment Terminal (POS, vending machine, etc.)
+Broadcasts payment requests and stores Merkle Tree + private key
+User’s Mobile Wallet App
+Receives request, approves transaction, maintains own Merkle Tree
+Signature Engine
+Present in both terminal & wallet to generate digital signatures (asymmetric encryption)
+Merkle Tree Builder Module
+Module that hashes each txn & builds tree
+Offline Storage (Local DB/Encrypted Storage)
+Stores txn data, hashes, and tree structure
+Backend Validator Server (Cloud or Blockchain)
+On sync, compares Merkle Roots, verifies txn hashes, flags mismatches
+Fraud Detection & Dispute Resolver
+Optional engine to resolve conflicting logs or anomalies
+
+
+
+1. Problem Statement
+
+In BLE-based proximity payments, existing systems are vulnerable to:
+	•	Spoofing (rogue devices pretending to be merchant or user)
+	•	Relay attacks (signals forwarded over distance to fake proximity)
+	•	Lack of formal handshake — BLE sessions are often unauthenticated & unauthorised
+	•	No built-in negotiation or challenge–response prior to transaction initiation
+
+Result: Security loopholes, mistaken transactions, impersonation, especially in crowded or dense BLE environments (e.g., multiple vendors in a fair, vending machines in a mall).
+
+⸻
+
+2. Technical Solution (BLE Transaction Handshake Protocol)
+
+We propose a cryptographically secure, double-consent BLE handshake protocol with mutual verification, intent confirmation, and timed validity prior to the actual transaction.
+
+⸻
+
+Core Flow Highlights:
+	1.	Device Discovery via BLE Broadcast
+	2.	Mutual Capability Exchange & Nonce Sharing
+	3.	Challenge–Response Authentication (using device keys & nonces)
+	4.	User Intent Acknowledgment (UI-driven “Confirm” with timer)
+	5.	Temporary Session Token Generation
+	6.	Proceed with actual transaction only if handshake succeeds
+
+⸻
+
+3. Key Innovation Points
+Feature
+Why it’s Patentable
+Formal BLE-level handshake protocol
+Currently BLE does not enforce a secure handshake layer for payments
+Mutual nonce + key-based challenge-response
+Prevents spoofing or impersonation attacks
+Time-locked session token
+Adds transaction-level security without persistent session risk
+User intent confirmation layer
+Prevents auto-acceptance from rogue devices
+
+
+4. Novelty Compared to Existing BLE Payment Systems
+Existing Tech
+Proposed Solution
+BLE pairing or proximity-based transaction
+Explicit transaction handshake with mutual auth
+Single-sided broadcast offers
+Both parties participate in handshake
+Lacks challenge–response before payment
+Cryptographic nonces + session tokens
+UI confirmation optional or absent
+Mandatory double confirmation & timeout
+
+
+1. Problem Statement
+
+Current proximity payment systems using Bluetooth Low Energy (BLE) suffer from significant security, integrity, and auditability gaps:
+	•	BLE-based payments lack mutual device verification and are vulnerable to spoofing and relay attacks.
+	•	Absence of strong user intent confirmation allows accidental or malicious transactions.
+	•	In offline scenarios (e.g., poor/no network), there’s no reliable logging or verifiability of transactions.
+	•	No tamper-evident logging mechanism exists for decentralized or isolated BLE devices (e.g., ATMs, vending machines).
+
+⸻
+
+2. Technical Solution Overview
+
+We propose a hybrid protocol combining:
+	•	A cryptographically secure BLE transaction handshake mechanism between payer and payee devices.
+	•	A dual Merkle tree log system on both devices to independently log and verify transaction records — even in offline environments.
+
+This ensures:
+	•	Mutual authentication
+	•	Double-consent verification
+	•	Offline tamper-evident logging
+	•	Post-facto reconciliation without centralized dependency
