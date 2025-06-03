@@ -1,1 +1,29 @@
-a
+Problem: Trust Inference and Delegation in Multi-Agent Ambient Systems
+
+Complex Statement:
+In a fully ambient environment, multiple invisible AI agents (visual, auditory, contextual) operate simultaneously. Currently, there’s no system-level trust framework to:
+	•	Infer which agent should lead the response,
+	•	Delegate tasks based on domain expertise, and
+	•	Prevent adversarial manipulation through spoofed sensory data.
+
+Why it’s important:
+Without such delegation, environments may either stay silent, overreact, or be manipulated by fake signals (e.g., sound injections, fake movements, LLM hallucinations).
+
+
+
+Problem: Cross-Domain Intent Transfer in Ambient Environments
+
+Complex Statement:
+Human goals often span domains (e.g., “prepare for a client call” involves space cleaning, mood lighting, coffee, reminders). Ambient systems today can’t transfer a user’s high-level intent across unrelated subsystems autonomously.
+
+Why it’s important:
+It limits ambient intelligence to single-domain optimizations (only light, or only HVAC, or only reminders).
+
+
+Problem: Dynamic Hierarchical Reality Filtering for Mixed-Input Environments
+
+Complex Statement:
+Ambient systems often fail in mixed environments (AR overlays, multiple voices, synthetic media, multiple human agents). They cannot dynamically filter what’s real, relevant, and permitted, especially when hallucinations or spoofing may be intentional.
+
+Why it’s important:
+Ambient systems will eventually operate in hybrid physical-virtual realities, where distinguishing authenticity is key.
