@@ -1,87 +1,113 @@
-In 2025, I consistently delivered strong BAU outcomes while significantly expanding my scope of ownership across delivery, platform risk management, initiatives, innovation, and team enablement. I served as an end-to-end owner and trusted SME for critical systems, proactively took accountability for risk-sensitive areas, and embedded myself early into the IC project. In parallel, I drove innovation through patents, mentored new inventors and team members, and contributed to broader organizational initiatives. 
+Manage Risk – Progress & Demonstrated Outcomes
+
+As part of my commitment to delivering secure, compliant, and stable systems, I proactively identified, tracked, and mitigated multiple operational, security, and compliance risks throughout 2025.
+
+Non-Permitted Technologies (NPT) & Vulnerability Management
+	•	Took end-to-end ownership of NPT tracking and vulnerability remediation within my scope.
+	•	Performed weekly updates in the CM portal, ensuring transparency and audit readiness across teams.
+	•	Actively drove follow-ups with application, infrastructure, and security teams to ensure timely remediation and closure of vulnerabilities.
+	•	Maintained consistent communication with technical leads and stakeholders to close gaps, reduce exposure, and prevent risk accumulation.
+	•	Helped strengthen overall compliance posture by ensuring risks were tracked, visible, and resolved within expected timelines.
+
+End-of-Life (EOL) Technology Risk Reduction
+	•	Actively worked on EOL remediation initiatives involving Teradata, Splunk, Trellix, Microsoft Visual Studio tools, and Microsoft Office Access Database Engine.
+	•	Independently gathered, validated, and reconciled information across multiple teams where ownership and documentation were fragmented.
+	•	Coordinated with application, infrastructure, security, and compliance stakeholders to assess usage, validate risk, and align on remediation or decommissioning paths.
+	•	Contributed to reducing long-term operational and security risk by driving clarity and accountability in EOL actions.
+
+Sensitive Data & Compliance Hygiene
+	•	Ensured that systems and local environments under my responsibility did not contain sensitive, restricted, or compliance-risk data.
+	•	Followed internal security and data-handling best practices to maintain a clean, compliant workspace.
+	•	Proactively aligned daily work practices with the bank’s enterprise-level risk management and compliance standards.
+
+
+Drive Operational Excellence – Progress & Demonstrated Outcomes
+
+Throughout 2025, I focused on improving the quality, consistency, and efficiency of delivery by strengthening ownership, streamlining execution, and reducing operational friction across systems and teams.
+
+End-to-End Ownership for Stable & Predictable Delivery
+	•	In the Upload module, a large-scale and business-critical system, I focused on stability, efficiency, and minimal rework by managing all functional and technical aspects end to end — from requirement discussions and design clarification through deployment and post-release support.
+	•	By acting as a single accountable owner and SME, I ensured clear decision-making, faster issue resolution, and reduced dependency-related delays.
+
+Improved Communication & Handoff Efficiency
+	•	Established a consistent communication rhythm with Line of Business and testing teams to ensure early requirement clarity and clean handoffs.
+	•	This reduced back-and-forth cycles, minimized late-stage changes, and resulted in smoother and more predictable releases.
+
+Operational Discipline Across BAU & New Intakes
+	•	Applied structured execution practices across BAU deliverables and new intakes such as Dual Deposit PIN, ensuring alignment across middleware, UI, database, and testing teams.
+	•	Proactively identified dependencies and risks early, helping avoid rework and schedule slippage.
+
+System Stability & Issue Resolution
+	•	Collaborated closely with DBAs and senior engineers to analyze backend flows and resolve database issues, improving system reliability and reducing repeat defects.
+	•	Ensured defects were addressed with a root-cause mindset, contributing to long-term stability rather than short-term fixes.
+
+Risk & Compliance as an Operational Enabler
+	•	Integrated NPT tracking, vulnerability remediation, and EOL technology management into regular delivery workflows.
+	•	This helped ensure operational excellence was not limited to speed, but also included security, compliance, and audit readiness.
+
+Team Enablement & Continuity
+	•	Supported onboarding of new team members and ensured continuity during team transitions through structured KT and documentation.
+	•	Reduced ramp-up time and dependency risks, contributing to sustained delivery efficiency.
+
+
 
 ---
+Drive Growth – Progress & Demonstrated Outcomes
 
-## 1. BAU Delivery & Engineering Ownership
+In 2025, I actively focused on driving growth across three dimensions: my own technical and professional development, the growth of innovation and capability within the organization, and the growth of others through collaboration and mentoring.
 
-- Took end-to-end ownership of the Upload module, a critical system, covering requirements, design discussions, development support, defect resolution, production deployments, and post-release support.
-- Acted as Primary SME and Single Point of Contact, ensuring delivery predictability, system stability, and fast issue resolution.
-- Maintained proactive and structured communication with Line of Business (LOB), testing, middleware, UI, and database teams, resulting in smooth releases and positive stakeholder feedback.
-- Worked on Dual Deposit Bin intake, coordinating and managing multiple dependencies.
+Technical & Capability Growth
+	•	Expanded my technical breadth across cloud, backend systems, and databases by proactively deepening my understanding of cloud architecture and deployment workflows.
+	•	Strengthened system-level thinking by working on NPT remediation and EOL initiatives, which required understanding legacy technologies, platform dependencies, and long-term modernization paths.
+	•	Built deeper backend knowledge through close collaboration with DBAs and senior engineers, improving my ability to contribute beyond application-level tasks.
 
----
+Innovation-Driven Growth
+	•	Actively drove innovation efforts by submitting 10+ patent ideas to the Anaqua portal across domains such as system security, cloud, and platform architecture.
+	•	Collaborated across teams to refine and strengthen patent submissions, contributing to a stronger and more scalable innovation pipeline.
+	•	Mentored and supported first-time inventors, enabling successful filings and helping build confidence and capability within the broader innovation community.
+	•	Achieved my first patent grant, marking tangible progress in innovation impact.
 
-## 2.  Initiative Ownership: IC
+Growth Through Strategic Initiatives
+	•	Proactively embedded myself early in the IC platform initiative, a key future growth area for the organization.
+	•	Invested time to understand architecture, data flows, and system design, positioning myself to contribute meaningfully as the platform scales.
 
-- Proactively onboarded onto the IC related work initiative.
-- Took early ownership of ATMID generation via the NFAE module, positioning myself at the foundational stage of IC delivery.
-- Invested time upfront to deeply understand IC architecture, data flows, and integration points, beyond immediate implementation requirements.
-- Collaborated closely with onshore stakeholders, architects, and cross-functional teams to understand evolving requirements and long-term design direction.
-- Actively contributing to end-to-end system design, flow definition, and dependency analysis, ensuring alignment with scalability and future IC roadmap needs.
+Learning & Continuous Upskilling
+	•	Continuously upskilled through structured training, including:
+	•	Python for Developers
+	•	AI/ML Foundations
+	•	Containers and OpenShift
+	•	Applied learning to real-world scenarios, strengthening readiness for future platforms and higher-impact responsibilities.
 
----
+Growth of Others & Knowledge Sharing
+	•	Supported the growth of team members and new joiners through onboarding, KT sessions, and ongoing guidance.
+	•	Acted as a Learning SPOC, enabling wider participation in training programs and fostering a culture of continuous learning.
 
-## 3. Platform Risk, Compliance & System Depth
+Overall Impact
+Through sustained learning, innovation leadership, early involvement in strategic platforms, and mentoring of others, I contributed to both immediate and long-term growth for the organization while building the skills and mindset required to take on broader responsibilities.
 
-- Took full ownership of NPT tracking and vulnerability management, driving weekly follow-ups, cross-stream coordination, accurate CM portal updates, and timely closures.
-- Received KT on cloud architecture and deployment workflows and actively started building hands-on exposure to strengthen platform-level understanding.
+--
+Great Place to Work – Progress & Demonstrated Outcomes
 
----
+In alignment with the goal of fostering a collaborative, inclusive, and high-energy work culture, I consistently contributed to making the team and workplace more engaging, supportive, and effective.
 
-## 4. End-of-Life (EOL) Application Remediation & Risk Reduction
+Positive & Inclusive Team Presence
+	•	Maintained a positive, approachable, and professional presence within the team, creating an environment where peers felt comfortable seeking support and clarification.
+	•	Actively encouraged open communication and collaboration, helping build trust and psychological safety.
 
-- Actively worked on multiple End-of-Life (EOL) application initiatives, including Teradata, Splunk, Trellix, Microsoft Visual Studio tools, and Microsoft Office Access Database Engine.
-- Applied a new, structured approach to EOL remediation by independently gathering, validating, and reconciling information across multiple teams where ownership and documentation were fragmented.
-- Coordinated with application, infrastructure, security, and compliance teams to assess risk, validate usage, and align on remediation or decommissioning paths.
-- Ensured accurate tracking and clarity of ownership, contributing to reduced operational and security risk.
+Peer Support & Collaboration
+	•	Regularly assisted team members with functional and technical clarifications, supporting smoother execution and reducing blockers.
+	•	Collaborated actively both within the team and across teams, promoting alignment and shared ownership of outcomes.
+	•	Supported onboarding of new team members through structured KT and ongoing guidance, enabling faster integration and confidence.
 
----
+Culture, Engagement & Community Contribution
+	•	Volunteered in ESG initiatives, contributing to the organization’s commitment to social responsibility and community impact.
+	•	Participated in employee engagement activities, supporting morale, inclusivity, and team bonding.
+	•	Took on visible roles such as hosting the MAFCT Townhall, contributing to transparency, connection, and broader organizational engagement.
 
-## 5. Team Enablement & Leadership by Action
+Respectful & Accountable Work Practices
+	•	Demonstrated professionalism, reliability, and respect in day-to-day interactions, reinforcing a culture of accountability and mutual support.
+	•	Balanced delivery focus with empathy and collaboration, ensuring outcomes were achieved without compromising team well-being.
 
-- Stepped up during team transitions when senior members moved to other teams, ensuring delivery continuity and stability.
-- Onboarded new team members and conducted structured KT sessions, accelerating functional and technical ramp-up.
-- Acted as Learning SPOC for the team, managing training nominations, deadlines, communications, and participation across internal and external programs.
+Overall Impact
+Through consistent collaboration, peer support, and active participation in engagement initiatives, I contributed to a work environment that is inclusive, supportive, and high-performing. My actions helped strengthen team cohesion, trust, and morale while enabling effective and enjoyable collaboration.
 
----
-
-## 6. Innovation, Patents & Thought Leadership
-
-- Submitted 10+ patent ideas in the Anaqua portal across system security, cloud, and blockchain domains.
-- Mentored and guided first-time inventors, supporting ideation, structuring, and submission, resulting in successful filings.
-- Actively contributed to uplifting new inventors and campus hires, strengthening the organization’s innovation pipeline.
-- Achieved my first patent grant, marking a key milestone.
-
----
-
-## 7. Recognition & Stakeholder Validation
-
-- Received a Bronze Award for BAU Deliverables.
-- Earned multiple High Five Awards from different teams for consistent delivery and collaboration.
-- Received 13 ecards recognizing precision, ownership, and execution excellence.
-- stakeholder appreciation highlighting end-to-end ownership, technical proficiency, professionalism, reliability, and strengthened LOB trust.
-
----
-
-## 8. Visibility, Communication & Organizational Engagement
-
-- Hosted and anchored the MAFCT Townhall, coordinating communication and engagement for a broad audience.
-- Delivered presentations and demos during innovation challenges and internal showcases.
-- Participated in the 2025 Client-Facing Innovation Challenge.
-- Contributed to ESG volunteering and employee engagement initiatives, supporting culture and community building.
-
----
-
-## 9. Continuous Learning & Future Readiness
-
-- Completed key technical trainings:
-    - Python for Developers
-    - AI/ML Foundations
-    - Containers & OpenShift
-- Actively building depth across cloud, platform, and system architecture to support higher-impact responsibilities.
-
----
-
-## Overall Impact
-
-2025 has been a year of strong growth, ownership, and increasing impact. I consistently delivered on critical BAU commitments while expanding into strategic initiatives, platform risk ownership, innovation leadership, and team enablement. I have demonstrated reliability, technical depth, and maturity in stakeholder management, while proactively aligning myself with the organization’s future direction through early involvement in IC. I am motivated and prepared to take on greater technical and leadership responsibilities and continue contributing at a higher level.
