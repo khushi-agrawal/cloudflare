@@ -1,205 +1,87 @@
+In 2025, I consistently delivered strong BAU outcomes while significantly expanding my scope of ownership across delivery, platform risk management, initiatives, innovation, and team enablement. I served as an end-to-end owner and trusted SME for critical systems, proactively took accountability for risk-sensitive areas, and embedded myself early into the IC project. In parallel, I drove innovation through patents, mentored new inventors and team members, and contributed to broader organizational initiatives. 
 
-The integration of persistent memory in AI-driven systems, particularly in conversational AI, has introduced a critical vulnerability: indirect prompt injection attacks. These advanced attacks exploit the AI model’s ability to retain context across sessions by implanting false or manipulated memories into its storage mechanisms. Over time, these implanted memories can be exploited to exfiltrate sensitive user data, alter decision-making processes, or produce misleading outputs, resulting in:
-	•	Security breaches: Unauthorized access to sensitive personal, financial, or organizational data.
-	•	Misinformation: Generation of inaccurate or biased responses, eroding trust in the AI system.
-	•	Operational risks: Misguided actions taken by users or systems based on tampered outputs, potentially causing harm in critical industries such as healthcare, finance, and defense.
+---
 
-Root Causes and Threat Dynamics
-	1.	Persistence of False Memories:
-Unlike one-time prompt injections, these attacks plant malicious prompts or data points into the AI’s retained context or memory. Over time, these data points become indistinguishable from genuine user interactions, enabling attackers to extract valuable information repeatedly.
-	2.	Evolving Attack Surfaces:
-The use of external input sources (e.g., websites, documents, or role-play scenarios) introduces indirect entry points for attackers. Malicious prompts are often embedded into trusted sources, such as:
-	•	Files or APIs processed by the AI system.
-	•	Role-play setups designed to bypass access control systems.
-	•	Dynamic web content that AI assistants fetch without validation.
-	3.	Lack of Adaptive Countermeasures:
-AI systems typically rely on static validation methods, which fail to detect evolving or subtle injection patterns. Additionally, most existing anomaly detection mechanisms are reactive rather than proactive, identifying threats only after they have caused damage.
-	4.	Absence of Context Validation:
-AI models process inputs without sufficiently verifying their authenticity against a validated knowledge base. This makes it easy for attackers to introduce false prompts that the system accepts as legitimate.
+## 1. BAU Delivery & Engineering Ownership
 
-Consequences and Risks
-	1.	Erosion of Trust:
-Users lose confidence in AI systems if they consistently generate erroneous or harmful outputs due to compromised memory.
-	2.	Compliance and Legal Issues:
-In industries handling sensitive data (e.g., healthcare, finance), a breach caused by such attacks could violate privacy regulations (e.g., GDPR, HIPAA), leading to financial penalties and reputational damage.
-	3.	Cross-Session Exploits:
-Persistent injection attacks allow malicious actors to extract data or influence outputs across multiple interactions, making them harder to trace and mitigate.
-	4.	Economic Impact:
-Organizations bear significant costs in damage control, legal battles, and system overhauls resulting from successful attacks.
+- Took end-to-end ownership of the Upload module, a critical system, covering requirements, design discussions, development support, defect resolution, production deployments, and post-release support.
+- Acted as Primary SME and Single Point of Contact, ensuring delivery predictability, system stability, and fast issue resolution.
+- Maintained proactive and structured communication with Line of Business (LOB), testing, middleware, UI, and database teams, resulting in smooth releases and positive stakeholder feedback.
+- Worked on Dual Deposit Bin intake, coordinating and managing multiple dependencies.
 
-Call to Action
+---
 
-Addressing this vulnerability is paramount for ensuring data security, reliability, and operational efficiency of AI-driven systems. A robust solution must incorporate:
-	•	Real-time anomaly detection and proactive threat mitigation.
-	•	Immutable logs to trace and verify context sources.
-	•	Dynamic parameter validation to sanitize input/output flows.
-	•	Blockchain integration for trust and transparency in memory and data handling.
+## 2.  Initiative Ownership: IC
 
-By solving these challenges, we can secure the future of AI interactions while maintaining user trust and compliance with global data protection standards.
+- Proactively onboarded onto the IC related work initiative.
+- Took early ownership of ATMID generation via the NFAE module, positioning myself at the foundational stage of IC delivery.
+- Invested time upfront to deeply understand IC architecture, data flows, and integration points, beyond immediate implementation requirements.
+- Collaborated closely with onshore stakeholders, architects, and cross-functional teams to understand evolving requirements and long-term design direction.
+- Actively contributing to end-to-end system design, flow definition, and dependency analysis, ensuring alignment with scalability and future IC roadmap needs.
 
+---
 
-Technical Solution
+## 3. Platform Risk, Compliance & System Depth
 
-To address the vulnerabilities caused by persistent memory in AI systems and mitigate indirect prompt injection attacks, the proposed solution integrates multiple layers of security, validation, and adaptability. This architecture leverages technologies such as anomaly detection, blockchain (Hyperledger), and dynamic memory validation to create a resilient AI ecosystem. Below is a detailed technical solution based on the provided flow diagram:
+- Took full ownership of NPT tracking and vulnerability management, driving weekly follow-ups, cross-stream coordination, accurate CM portal updates, and timely closures.
+- Received KT on cloud architecture and deployment workflows and actively started building hands-on exposure to strengthen platform-level understanding.
 
-1. Input Validation Layer
-	•	Objective: Prevent malicious prompts or data from entering the AI system.
-	•	Mechanism:
-	•	Use natural language processing (NLP)-based filters to sanitize and validate user inputs.
-	•	Implement strict formatting and schema checks to reject inputs not adhering to predefined patterns.
-	•	Integrate an AI-based anomaly detection engine (renamed to “Cogniscan”) to identify and flag potentially harmful prompts based on historical patterns and known attack vectors.
+---
 
-2. Role-Based Access and User Authentication
-	•	Objective: Limit data access and responses based on the user’s role and authentication level.
-	•	Mechanism:
-	•	Utilize multi-factor authentication (MFA) to verify user identity.
-	•	Assign roles dynamically using session-based tokens and ensure that prompts are processed based on the user’s access level.
-	•	Log user roles and interaction data onto a Hyperledger Fabric ledger for transparency and auditability.
+## 4. End-of-Life (EOL) Application Remediation & Risk Reduction
 
-3. Blockchain-Powered Context Memory
-	•	Objective: Secure the AI system’s memory and prevent the storage of malicious or false data.
-	•	Mechanism:
-	•	Replace standard memory storage mechanisms with a Hyperledger-based immutable memory layer, where context and history are verified and encrypted.
-	•	Employ Merkle trees for efficient data integrity verification.
-	•	Include smart contracts to enforce memory validation rules dynamically, ensuring only authenticated and validated context is retained.
-	•	Blockchain entries store the metadata of memory (not the actual user data) to provide tamper-proof tracking.
+- Actively worked on multiple End-of-Life (EOL) application initiatives, including Teradata, Splunk, Trellix, Microsoft Visual Studio tools, and Microsoft Office Access Database Engine.
+- Applied a new, structured approach to EOL remediation by independently gathering, validating, and reconciling information across multiple teams where ownership and documentation were fragmented.
+- Coordinated with application, infrastructure, security, and compliance teams to assess risk, validate usage, and align on remediation or decommissioning paths.
+- Ensured accurate tracking and clarity of ownership, contributing to reduced operational and security risk.
 
-4. Dynamic Memory Validation and Sanitization
-	•	Objective: Regularly clean and validate AI memory to ensure malicious prompts or false memories are removed.
-	•	Mechanism:
-	•	Implement interval-based sanitization algorithms to scan for and remove invalid data in real time.
-	•	Incorporate AI-driven pattern analysis to detect and flag injected anomalies for manual or automated removal.
-	•	Use metadata stored in the blockchain to verify the authenticity of retained memory entries.
+---
 
-5. Adaptive Anomaly Detection (Cogniscan)
-	•	Objective: Continuously monitor for suspicious activity across input, memory, and output layers.
-	•	Mechanism:
-	•	Leverage machine learning models trained on large datasets of known attacks to detect subtle anomalies.
-	•	Incorporate behavioral analytics to identify unexpected changes in system responses or user interactions.
-	•	Trigger alerts or preventive actions when anomalies are detected, such as suspending memory retention or isolating malicious prompts.
+## 5. Team Enablement & Leadership by Action
 
-6. AI Output Validation Layer
-	•	Objective: Ensure that responses generated by the AI are safe, accurate, and free from malicious influence.
-	•	Mechanism:
-	•	Integrate a post-processing filter to cross-check AI-generated outputs against pre-defined security and ethical guidelines.
-	•	Use blockchain-stored validation criteria to dynamically approve or flag responses before they are delivered to the user.
-	•	Log outputs for auditing and debugging purposes without compromising user privacy.
+- Stepped up during team transitions when senior members moved to other teams, ensuring delivery continuity and stability.
+- Onboarded new team members and conducted structured KT sessions, accelerating functional and technical ramp-up.
+- Acted as Learning SPOC for the team, managing training nominations, deadlines, communications, and participation across internal and external programs.
 
-7. Logging and Audit Trail (Hyperledger Integration)
-	•	Objective: Provide a transparent and immutable record of system interactions for forensic analysis and compliance.
-	•	Mechanism:
-	•	Store all validated inputs, outputs, and context updates in a Hyperledger-based distributed ledger.
-	•	Include access logs and anomaly detection alerts in the blockchain to provide a comprehensive audit trail.
-	•	Enable secure, role-based access to logs for compliance officers and security analysts.
+---
 
-8. Feedback and Continuous Improvement
-	•	Objective: Adapt and enhance the system based on real-world performance and threat evolution.
-	•	Mechanism:
-	•	Utilize user and system feedback to improve Cogniscan anomaly detection models.
-	•	Conduct periodic blockchain audits to identify inefficiencies or potential vulnerabilities in memory handling.
-	•	Implement AI-assisted recommendations for updating validation rules and security protocols.
+## 6. Innovation, Patents & Thought Leadership
 
-Key Features of the Solution
-	1.	Immutable Memory Protection: Prevents tampering with stored context using blockchain technology.
-	2.	Dynamic Validation: Continuously validates and sanitizes data in real time.
-	3.	Adaptive Security: Employs machine learning to evolve with emerging threats.
-	4.	Transparency and Accountability: Provides tamper-proof logs for auditing and compliance.
+- Submitted 10+ patent ideas in the Anaqua portal across system security, cloud, and blockchain domains.
+- Mentored and guided first-time inventors, supporting ideation, structuring, and submission, resulting in successful filings.
+- Actively contributed to uplifting new inventors and campus hires, strengthening the organization’s innovation pipeline.
+- Achieved my first patent grant, marking a key milestone.
 
-Core Invention Features
+---
 
-The proposed solution addresses critical vulnerabilities in AI systems by implementing a novel framework that integrates persistent memory protection, anomaly detection, and blockchain technology. Below are the features that make this invention unique and highlight its non-obvious aspects:
+## 7. Recognition & Stakeholder Validation
 
-1. Blockchain-Based Memory Validation
+- Received a Bronze Award for BAU Deliverables.
+- Earned multiple High Five Awards from different teams for consistent delivery and collaboration.
+- Received 13 ecards recognizing precision, ownership, and execution excellence.
+- stakeholder appreciation highlighting end-to-end ownership, technical proficiency, professionalism, reliability, and strengthened LOB trust.
 
-Feature:
-The use of Hyperledger blockchain technology for securing AI memory and context storage is a groundbreaking aspect of this invention. Unlike traditional memory architectures, the system ensures immutability, traceability, and dynamic validation through:
-	•	Merkle trees for integrity verification.
-	•	Smart contracts to enforce validation rules in real time.
-	•	A tamper-proof ledger that tracks and audits all context updates and interactions.
+---
 
-Why it’s unique:
-	•	Existing AI models typically use conventional storage without immutability.
-	•	The use of blockchain to dynamically validate and sanitize persistent memory is non-obvious and addresses a critical gap in AI security.
+## 8. Visibility, Communication & Organizational Engagement
 
-2. Adaptive Anomaly Detection Engine (Cogniscan)
+- Hosted and anchored the MAFCT Townhall, coordinating communication and engagement for a broad audience.
+- Delivered presentations and demos during innovation challenges and internal showcases.
+- Participated in the 2025 Client-Facing Innovation Challenge.
+- Contributed to ESG volunteering and employee engagement initiatives, supporting culture and community building.
 
-Feature:
-The anomaly detection engine leverages machine learning and behavioral analytics to proactively detect indirect prompt injection attempts. It continuously adapts based on evolving threat patterns using AI models trained on diverse datasets.
+---
 
-Why it’s unique:
-	•	Conventional systems rely on static rule-based validation, which cannot adapt to subtle or evolving injection patterns.
-	•	The integration of feedback loops for anomaly detection ensures dynamic learning, making the system resilient against future threats.
+## 9. Continuous Learning & Future Readiness
 
-3. Dynamic Parameterized Tree Structure
+- Completed key technical trainings:
+    - Python for Developers
+    - AI/ML Foundations
+    - Containers & OpenShift
+- Actively building depth across cloud, platform, and system architecture to support higher-impact responsibilities.
 
-Feature:
-A tree-based dynamic memory model powered by blockchain ensures that all steps of data processing and context updates receive user-interaction-based parameters dynamically. This ensures that memory retention and context handling remain secure, consistent, and transparent across all sessions.
+---
 
-Why it’s unique:
-	•	Conventional systems use flat memory structures, which are less secure and harder to validate in dynamic environments.
-	•	The hierarchical tree approach, combined with parameterized dynamic updates, is non-obvious and significantly enhances transparency and reliability.
+## Overall Impact
 
-4. Role-Based Context Access and Validation
-
-Feature:
-The system enforces role-based access controls (RBAC) to regulate memory and output retrieval based on user authentication and privilege levels. Validation rules are implemented via smart contracts to ensure compliance with pre-defined access policies.
-
-Why it’s unique:
-	•	AI systems currently lack robust role-based validations for context management.
-	•	The use of blockchain to enforce RBAC dynamically adds a layer of security that is not common in existing AI models.
-
-5. Multi-Layer Security Framework
-
-Feature:
-The invention incorporates multiple layers of validation, from input sanitization to output verification. Each layer is designed to handle specific attack vectors, such as role-play prompt injection, malicious file processing, or dynamic web content injection.
-
-Why it’s unique:
-	•	Existing solutions often focus on a single point of validation, leaving gaps in multi-step attacks.
-	•	This framework ensures end-to-end security by integrating anomaly detection, blockchain-based logs, and dynamic memory sanitization at all stages.
-
-6. Transparent and Auditable Logs
-
-Feature:
-By storing all critical interactions and memory updates in an immutable ledger, the system provides transparency and accountability. This is particularly valuable for compliance in regulated industries (e.g., finance, healthcare).
-
-Why it’s unique:
-	•	Traditional systems rely on centralized, mutable logs that are prone to tampering.
-	•	Using blockchain for auditing ensures non-repudiation and tamper-proof logging, which is non-obvious in AI memory handling.
-
-7. Resilience Against Cross-Session Exploits
-
-Feature:
-The system’s dynamic sanitization algorithms and blockchain validation prevent cross-session exploitation of maliciously implanted prompts. By validating every context reference against an immutable ledger, it ensures that memory corruption is detected and mitigated in real time.
-
-Why it’s unique:
-	•	Current AI systems often fail to detect cross-session attacks due to a lack of persistent memory checks.
-	•	The combination of anomaly detection and blockchain-backed validation ensures resilience against such sophisticated attack vectors.
-
-Key Non-Obvious Aspects
-	1.	Combination of Blockchain and AI:
-Using blockchain for memory validation and anomaly detection in AI is an innovative intersection of two technologies that addresses specific vulnerabilities in persistent memory.
-	2.	Dynamic Tree Structure with Parameterized Updates:
-This hierarchical approach ensures that user interactions dynamically influence memory validation and storage, a feature absent in conventional flat-memory AI systems.
-	3.	End-to-End Security Integration:
-By addressing vulnerabilities across the input, memory, and output layers, the invention provides a holistic security framework, which is both comprehensive and non-obvious.
-	4.	Adaptive Learning Mechanisms:
-The integration of feedback loops for anomaly detection ensures that the system evolves with emerging threats, making it uniquely future-proof.
-
-
-Core Invention Features (Concise for Slide)
-	•	Blockchain-Backed Memory Validation:
-Ensures secure, immutable, and tamper-proof AI memory using Hyperledger, with smart contracts enforcing memory validation rules dynamically.
-	•	Dynamic Anomaly Detection (Cogniscan):
-Adaptive engine detects indirect prompt injection using AI-powered behavioral analytics and continuously evolves with new threats.
-	•	Hierarchical Tree-Based Memory Management:
-Dynamic, parameterized tree structure enhances transparency and security by validating user interactions at every step.
-	•	Role-Based Context Access:
-Regulates memory and output access based on multi-factor authentication and dynamically enforced blockchain rules.
-	•	Multi-Layered Security Framework:
-Integrates input sanitization, blockchain audits, memory validation, and output filtering for end-to-end threat protection.
-	•	Tamper-Proof Audit Trail:
-Immutable Hyperledger-based logs ensure transparency, compliance, and forensic accountability in regulated environments.
-	•	Resilience Against Cross-Session Exploits:
-Real-time sanitization and validation detect and prevent malicious prompt persistence across user sessions.
-
-
+2025 has been a year of strong growth, ownership, and increasing impact. I consistently delivered on critical BAU commitments while expanding into strategic initiatives, platform risk ownership, innovation leadership, and team enablement. I have demonstrated reliability, technical depth, and maturity in stakeholder management, while proactively aligning myself with the organization’s future direction through early involvement in IC. I am motivated and prepared to take on greater technical and leadership responsibilities and continue contributing at a higher level.
